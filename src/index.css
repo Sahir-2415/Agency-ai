@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* this is tailwind css advanced configuration syntax , it defines a custom wehere dark , whereever class has dark , dark theme will apply */
+
+*{
+  font-family: "Manrope",sans-serif;
+  font-weight: 500;
+  cursor: none;
+}
+@theme{
+  --color-primary:#5044E5
+}
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
